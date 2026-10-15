@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our online product catalog for electronics, fashion, and accessories.">
+    <title>ShopEase | Product Catalog</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect the JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Website Header -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#home" class="logo" aria-label="ShopEase home">
+                ShopEase
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- Welcome Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Discover Your Favorite Products</h1>
+                <p>Explore quality products at great prices.</p>
+                <a href="#products" class="primary-button">
+                    Explore Products
+                </a>
+            </div>
+        </section>
+
+        <!-- Product Catalog -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>Our Products</h2>
+                <p>Find the products that suit your needs.</p>
+
+                <!-- Search and sorting controls -->
+                <div class="catalog-controls">
+                    <label for="searchInput">Search products</label>
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search by product name..."
+                    >
+
+                    <label for="categoryFilter">Filter by category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+
+                    <label for="sortProducts">Sort products</label>
+                    <select id="sortProducts">
+                        <option value="default">Default order</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+
+                <p id="resultCount" aria-live="polite">
+                    Loading products...
+                </p>
+
+                <!-- JavaScript will insert product cards here -->
+                <div id="productList" class="product-grid">
+                    <p>Loading products...</p>
+                </div>
+
+                <p id="emptyMessage" hidden>
+                    No products found. Try another search.
+                </p>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <h2>Shop by Category</h2>
+
+                <div class="category-list">
+                    <button type="button" class="category-button"
+                        data-category="electronics">
+                        Electronics
+                    </button>
+
+                    <button type="button" class="category-button"
+                        data-category="fashion">
+                        Fashion
+                    </button>
+
+                    <button type="button" class="category-button"
+                        data-category="accessories">
+                        Accessories
+                    </button>
+
+                    <button type="button" class="category-button"
+                        data-category="all">
+                        All Products
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About ShopEase</h2>
+                <p>
+                    ShopEase is a sample e-commerce product catalog
+                    designed to help customers explore products easily.
+                    Browse categories, search for products, and sort
+                    items by price or name.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Website Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; 2026 ShopEase. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
